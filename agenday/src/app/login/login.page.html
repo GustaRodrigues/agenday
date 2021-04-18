@@ -1,13 +1,15 @@
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <div class="margin-title">
-
-      <ion-title class="title">AgenDay</ion-title>
-    </div>
-    <div class="image">
-      <div>
-        <img src="../../assets/login/post-ti.png" alt="">
-      </div>
-    </div>
+  <ion-title>AgenDay</ion-title>
+  <div class="field"> 
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Username" name="username" type="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password" name="password" type="password"></ion-input>
+      </ion-item>
+      <ion-button expand="full">Sign In</ion-button>
+      <ion-button expand="full">Sing Up</ion-button>
+    </ion-list>
   </div>
 </ion-content>

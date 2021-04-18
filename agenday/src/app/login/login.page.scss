@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 ion-content {
-    --background: url('../../assets/background.jpg') no-repeat  -70px / cover;
-    background-attachment: fixed;
 
-}
-
-.title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 5em;
-    color: #66736C;
-}
-
-#container {
+    align-items: center;
     text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    
-  }
+    --background: url(../../assets/login/background.jpg) no-repeat  -65px/ cover;
+       
 
-.image {
-    margin-top: 20%;
 }
+
+ion-title {
+    font-family: 'Dancing Script', cursive;
+    color: #66736C;
+    font-weight: bold;
+    font-size: 20vw;
+    margin-top: 15vh;
+    margin-bottom: 25vh;
+}
+
+ion-list{ 
+    --ion-background-color: transparent;
+    border: red solid 2px;
+    
+ }
+
+ ion-input {
+     color: var(--ion-color-primary);
+     
+ }
+ 
