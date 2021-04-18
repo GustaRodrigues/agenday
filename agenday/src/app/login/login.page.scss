@@ -1,31 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
-ion-content {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+ion-content {
     align-items: center;
     text-align: center;
-    --background: url(../../assets/login/background.jpg) no-repeat  -65px/ cover;
-       
-
+    --background: url(../../assets/login/background.jpg) no-repeat 15% center/ cover;
+    color: var(--ion-color-primary);
 }
 
 ion-title {
     font-family: 'Dancing Script', cursive;
-    color: #66736C;
+    color: var(--ion-color-primary);
     font-weight: bold;
     font-size: 20vw;
     margin-top: 15vh;
-    margin-bottom: 25vh;
+    margin-bottom: 10vh;
 }
 
-ion-list{ 
+ion-list { 
     --ion-background-color: transparent;
-    border: red solid 2px;
-    
- }
+    background: url(../../assets/login/post-ti.png) no-repeat center / contain;
+    padding: 15% 0%;
+}
 
- ion-input {
-     color: var(--ion-color-primary);
-     
- }
- 
+ion-item {
+    --highlight-color-focused: none;
+    padding-bottom: 10px;
+} 
+
+ion-input {
+    color: var(--ion-color-primary);  
+    border: var(--ion-color-primary) solid 2px;
+    border-radius: 0.5em; 
+    padding-left: 1em !important;
+}
+
+p {
+    color: var(--ion-color-primary);
+    margin-top: -5px;
+    font-size: 0.9em;
+} 
+
+.field {
+    margin: 0px 17%;
+    padding: 10px;
+}
+
+ion-button {
+    display: flex;
+    width: 40%;  
+    margin: 0 auto;  
+}
+
+.signin {
+    margin-top: 20px;
+}
+
+.signup {
+    margin-top: 10px;
+    font-size: 0.8em;
+}

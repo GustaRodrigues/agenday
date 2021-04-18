@@ -1,15 +1,17 @@
 <ion-content [fullscreen]="true">
   <ion-title>AgenDay</ion-title>
-  <div class="field"> 
-    <ion-list>
+  <ion-list lines="none">
+    <div class="field">  
       <ion-item>
-        <ion-input placeholder="Username" name="username" type="username"></ion-input>
+        <ion-input required="true" placeholder="Username" name="username" type="username"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input placeholder="Password" name="password" type="password"></ion-input>
+        <ion-input required="true" placeholder="Password" name="password" type="password"></ion-input>
       </ion-item>
-      <ion-button expand="full">Sign In</ion-button>
-      <ion-button expand="full">Sing Up</ion-button>
-    </ion-list>
-  </div>
+      <p><a href="home">Forgot Password?</a></p>
+
+        <ion-button class="signin" expand="fixed">Sign In</ion-button>
+        <ion-button class="signup" expand="fixed" fill="clear">Sign Up</ion-button>
+    </div>
+  </ion-list>
 </ion-content>
