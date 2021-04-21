@@ -1,5 +1,34 @@
-<ion-content [fullscreen]="true">
-  <div id="container">
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-avatar>
+          <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="">
+        </ion-avatar>
+        <ion-col>
+          <ion-title>AgenDay</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-icon class="logout" slot="end" name="log-out-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
 
-  </div>
+<ion-content [fullscreen]="false">
+  <ion-tabs>
+    <ion-tab-bar slot="top" color="tertiary">
+      <ion-tab-button tab="add-activities">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="people"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="stats-chart-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="settings">
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

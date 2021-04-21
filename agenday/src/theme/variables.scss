@@ -74,7 +74,7 @@
    */
 
   body {
-    --ion-color-primary: #66736C;
+  --ion-color-primary: #66736C;
   --ion-color-primary-rgb: 102,115,108;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255,255,255;
@@ -188,10 +188,10 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
-    --ion-background-color-rgb: 18,18,18;
+    --ion-background-color: #ffffff;
+    --ion-background-color-rgb: 255,255,255;
 
-    --ion-text-color: #ffffff;
+    --ion-text-color: #66736C;
     --ion-text-color-rgb: 255,255,255;
 
     --ion-border-color: #222222;

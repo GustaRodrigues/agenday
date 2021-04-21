@@ -1,0 +1,46 @@
+.photo  {     
+    width: 100% !important;  
+    height: 100% !important;  
+    max-width: 10rem !important;  
+    max-height: 10rem !important;
+    margin: 1% auto 0;
+}
+
+.name {
+    color: var(--ion-color-primary); 
+    font-weight: bolder;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    margin: auto;
+}
+
+ion-input {
+    color: var(--ion-color-primary);
+    border: var(--ion-color-primary) solid 2px;
+    border-radius: 0.5rem;
+    padding-left: 1rem !important;
+    width: 80%; 
+    margin: auto !important;
+}
+
+ion-label {
+    color: var(--ion-color-primary) !important;
+    font-size: 1.5rem !important;
+    font-weight: bolder;
+    padding-bottom: 1rem;
+    margin-left: 10% !important;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding-top: 2rem;
+    margin-left: 10% !important;
+}
+
+ion-button {
+  display: flex;
+  width: 40%;  
+  margin: 2rem auto; 
+}
