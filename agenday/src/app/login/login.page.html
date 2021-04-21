@@ -1,20 +1,23 @@
-<ion-content [fullscreen]="true">
-  <ion-header id="logo">
-    <ion-title>AgenDay</ion-title>
-  </ion-header>
-  <div id="container">
-    <ion-list class="fields" lines="none">
-      <div class="label">
-        <ion-item>
-          <ion-input placeholder="Username" type="text" name="username"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input placeholder="Password" type="password" name="password"></ion-input>
-        </ion-item>
-        <p><a href="home">Forgot Password?</a></p>
-        <ion-button class="signin" expand="block">Sign In</ion-button>
-        <ion-button class="signup" expand="block" fill="clear">Sign Up</ion-button>
+<ion-app>
+  <ion-content [fullscreen]="true">
+    <div id="container">
+      <div class="form">
+        <h2>AgenDay</h2>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-input placeholder="Username" type="text" name="username"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Password" type="password" name="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button class="forgot" expand="full" fill="clear" (click)="presentModal()">Forgot Password ?</ion-button>
+
+        <div class="buttons">
+          <ion-button class="sign-in" expand="block">Sign In</ion-button>
+          <ion-button class="sign-up" expand="block" fill="clear">Sign Up</ion-button>
+        </div>
       </div>
-    </ion-list>
-  </div>
-</ion-content>
+    </div>
+  </ion-content>
+</ion-app>
