@@ -16,8 +16,13 @@ ion-card {
 .header {
     text-align: center;
     
-
     ion-card-title {
         color: var(--ion-color-primary);
     }
+}
+.custom-modal-forgot .modal-wrapper {
+
+    border: red solid 2px;
+
+
 }

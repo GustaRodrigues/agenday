@@ -67,6 +67,12 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
+ion-modal {
+  --ion-background-color: linear-gradient(45deg, var(--ion-color-primary), var(--ion-color-tertiary) );;
+  --ion-toolbar-background: var(--ion-color-step-150);
+  --ion-toolbar-border-color: var(--ion-color-step-250);
+}
+
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
@@ -174,12 +180,7 @@
     --ion-card-background: #1c1c1d;
   }
 
-  .ios ion-modal {
-    --ion-background-color: linear-gradient(45deg, var(--ion-color-primary), var(--ion-color-tertiary) );;
-    --ion-toolbar-background: var(--ion-color-step-150);
-    --ion-toolbar-border-color: var(--ion-color-step-250);
-  }
-
+ 
 
   /*
    * Material Design Dark Theme
