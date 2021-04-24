@@ -1,0 +1,41 @@
+ion-button {
+    margin: 5% auto;
+    width: 90%;
+}
+
+ion-list-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+ion-card {
+    background-color: var(--ion-color-tertiary);
+    margin: 3% auto;
+    width: 90%;
+}
+
+ion-card-header {
+    padding-bottom: 0;
+}
+
+ion-card-title {
+    color: white;
+    text-align: center;
+}
+
+ion-card-subtitle {
+    color: white;
+    text-align: right;
+}
+
+ion-card-content {
+    background-color: white;
+    border: var(--ion-color-tertiary) solid 2px;
+    border-radius: 5px;
+}
+
+ion-checkbox {
+    --border-color: var(--ion-color-tertiary);
+    margin-right: 5px;
+}
