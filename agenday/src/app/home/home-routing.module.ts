@@ -15,8 +15,13 @@ const routes: Routes = [
         path: 'add-activities',
         loadChildren: () => import('./add-activities/add-activities.module').then( m => m.AddActivitiesPageModule)
       },
+      {
+        path: 'progress',
+        loadChildren: () => import('./progress/progress.module').then( m => m.ProgressPageModule)
+      },
     ]
   },
+  
 ];
 
 @NgModule({
