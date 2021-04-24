@@ -1,6 +1,13 @@
+
 ion-button {
     margin: 5% auto;
     width: 90%;
+
+    &.newActivate {
+
+        width: min(90vw, 500px);
+
+    }
 }
 
 ion-list-header {
@@ -10,29 +17,60 @@ ion-list-header {
 }
 
 ion-card {
-    background-color: var(--ion-color-tertiary);
+    background-color: white;
+    border: var(--ion-color-tertiary) solid 1px;
     margin: 3% auto;
     width: 90%;
+
 }
 
 ion-card-header {
     padding-bottom: 0;
+    background: var(--ion-color-primary);
+  
+    .header-title {
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ion-card-subtitle {
+        color: black;
+        margin-top: 0;
+        text-align: start;
+
+    }
+
+    ion-card-content {
+        color: black;
+        border: none;
+        padding: 5px ;
+        
+
+        ion-card-subtitle {
+            font-weight: bold;
+            text-align: start;
+        }
+    }
+
+}
+
+.content-tasks {
+    max-height: 200px;
+    overflow: scroll;
 }
 
 ion-card-title {
-    color: white;
-    text-align: center;
-}
-
-ion-card-subtitle {
-    color: white;
-    text-align: right;
+    color: black;
+    text-align: left;
+    margin-bottom: 2px;
 }
 
 ion-card-content {
-    background-color: white;
-    border: var(--ion-color-tertiary) solid 2px;
-    border-radius: 5px;
+    border: var(--ion-color-tertiary) solid 1px;
+    :last-child {
+        border-radius: 0.25rem 0 0 0.25rem;
+    }
 }
 
 ion-checkbox {
