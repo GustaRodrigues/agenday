@@ -1,0 +1,18 @@
+ion-header{
+    ion-icon {
+        font-size: 2.5em;
+      margin-right: 1rem ;
+  }
+}
+
+ion-card {
+    background: white;
+}
+
+.header {
+    text-align: center;
+    
+    ion-card-title {
+        color: var(--ion-color-primary);
+    }
+} 
