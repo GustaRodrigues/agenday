@@ -19,6 +19,11 @@ const routes: Routes = [
         path: 'progress',
         loadChildren: () => import('./progress/progress.module').then( m => m.ProgressPageModule)
       },
+      {
+        path: 'new-activity',
+        loadChildren: () => import('./new-activity/new-activity.module').then( m => m.NewActivityPageModule)
+      },
+      
     ]
   },
   

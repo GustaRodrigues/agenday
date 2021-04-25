@@ -3,11 +3,17 @@ ion-button {
     margin: 5% auto;
     width: 90%;
 
-    &.newActivate {
+    &.newActivity {
 
         width: min(90vw, 500px);
+        background-color: #63EE60;
+        font-weight: bold;
 
     }
+}
+
+ion-button ion-icon{
+    padding-right: 5%;
 }
 
 ion-list-header {

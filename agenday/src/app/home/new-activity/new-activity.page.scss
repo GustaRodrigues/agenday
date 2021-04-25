@@ -1,0 +1,39 @@
+ion-list{
+    margin: 1%;
+}
+
+ion-input {
+    color: var(--ion-color-primary);
+    border: var(--ion-color-primary) solid 2px;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto !important;
+}
+
+ion-button {
+    display: flex;
+    width: 40%;  
+    margin: 1.5rem auto;
+    font-weight: bold;
+    font-size: 2.05vh;
+}
+
+ion-button ion-icon{
+    padding-right: 3%;
+}
+
+.header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+.create-button{
+    background-color: #63EE60;
+}
