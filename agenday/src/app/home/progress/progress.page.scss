@@ -1,0 +1,35 @@
+/*.progress_card {
+    color: var(--ion-color-primary);
+    border: var(--ion-color-primary) solid 2px;
+    border-radius: 0.5rem;
+    padding-left: 1rem !important;
+    width: 90%; 
+    margin: auto !important;
+} CSS antigo, talvez seja utilizado na próxima feature*/
+
+.progress_card {
+    color: var(--ion-color-primary);
+    border: var(--ion-color-primary) solid 2px;
+    border-radius: 0.5rem;
+    padding-left: 1rem !important;
+    width: 90%; 
+    margin-left: 1rem;
+}
+
+ion-progress-bar {
+    width: 80%; 
+    margin-left: 10%;
+}
+
+ion-card-title{
+    text-align: center;
+}
+
+ion-text{
+    margin-left: 10%;
+}
+
+.add_button_icon{
+    float: right;
+    background-color: transparent;
+}
