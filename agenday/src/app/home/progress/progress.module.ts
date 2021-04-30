@@ -8,6 +8,7 @@ import { ProgressPageRoutingModule } from './progress-routing.module';
 
 import { ProgressPage } from './progress.page';
 
+
 @NgModule({
   imports: [
     CommonModule,

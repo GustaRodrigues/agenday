@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivitiesManagerService } from '../../services/activities-manager.service';
+
 
 @Component({
   selector: 'app-add-activities',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-activities.page.scss'],
 })
 export class AddActivitiesPage implements OnInit {
+
+  public activityManager = ActivitiesManagerService.getInstance();
 
   constructor() { }
 

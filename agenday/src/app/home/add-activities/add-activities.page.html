@@ -6,111 +6,26 @@
         </ion-list-header>
     </ion-list>
 
-    <ion-card>
+    <ion-card *ngFor="let activity of activityManager.listOfActivities">
         <div class="background-header">
             <ion-card-header>
                 <div class="header-title">
-                    <ion-card-title>Aplicativo Mobile</ion-card-title>
-                    <ion-card-subtitle>Deadline: 01/01/22</ion-card-subtitle>
+                    <ion-card-title>{{activity.getName()}}</ion-card-title>
+                    <ion-card-subtitle>Deadline: {{activity.getDeadline()}}</ion-card-subtitle>
                 </div>
                 <ion-card-content>
-                    <ion-card-subtitle>Members:</ion-card-subtitle>
-                    Adyrnney
-                    Flavio Germano
-                    Gustavo
-                    Rodrigo
-                    Vinicius                    
+                    <ion-card-subtitle>{{activity.getMembers()}}</ion-card-subtitle>                    
                 </ion-card-content>
-                <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
-                <ion-card-subtitle>Progress: 15%</ion-card-subtitle>
+                <ion-progress-bar [color]="activity.getProgress() <= 30 ? 'danger' : 'secundary'" [value]=activity.getProgress()></ion-progress-bar>
+                <ion-card-subtitle>Progress: {{activity.getProgress()}}</ion-card-subtitle>
             </ion-card-header>
         </div>
         <ion-card-content class="content-tasks">
-            <ion-item>
-                <ion-checkbox></ion-checkbox>
-                <ion-label>Layout inicial</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-checkbox></ion-checkbox>
-                <ion-label>Programação</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-checkbox></ion-checkbox>
-                <ion-label>Modedelagem</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-checkbox></ion-checkbox>
-                <ion-label>Modedelagem</ion-label>
+            <ion-item *ngFor="let task of activity.getTasks()">
+                <ion-checkbox (click)=task.changeCompleted()></ion-checkbox>
+                <ion-label>{{task.getName()}}</ion-label>
             </ion-item>
         </ion-card-content>
     </ion-card>
 
-    <ion-card>
-        <div class="background-header">
-            <ion-card-header>
-                <div class="header-title">
-                    <ion-card-title>APS Sistema Distribuidos</ion-card-title>
-                    <ion-card-subtitle>Deadline: 01/15/22</ion-card-subtitle>
-                </div>
-                <ion-card-content>
-                    <ion-card-subtitle>Members:</ion-card-subtitle>
-                    Adyrnney
-                    Flavio Germano
-                    Gustavo
-                    Rodrigo
-                    Vinicius                    
-                </ion-card-content>
-                <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
-                <ion-card-subtitle>Progress: 45%</ion-card-subtitle>
-            </ion-card-header>
-        </div>
-        <ion-card-content class="content-tasks">
-            <ion-item>
-                <ion-checkbox></ion-checkbox>
-                <ion-label>Modedelagem</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-checkbox></ion-checkbox>
-                <ion-label>Programação</ion-label>
-            </ion-item>
-        </ion-card-content>
-    </ion-card>
-
-    <!-- <ion-card>
-            <ion-card-header>
-                <ion-card-title>Dispositivos Móveis</ion-card-title>
-                <ion-card-subtitle>Delivery date: 01/01/22</ion-card-subtitle>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Layout inicial</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Programação</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Layout Final</ion-label>
-                </ion-item>
-            </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-            <ion-card-header>
-                <ion-card-title>Sistemas Distribuídos</ion-card-title>
-                <ion-card-subtitle>Delivery date: 01/01/22</ion-card-subtitle>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Modedelagem</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Programação</ion-label>
-                </ion-item>
-            </ion-card-content>
-        </ion-card> -->
 </ion-content>

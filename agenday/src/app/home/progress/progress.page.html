@@ -2,78 +2,18 @@
 
     <ion-row>
 
-        <ion-card class="progress_card" color="tertriary">
-            <ion-card-title>Aplicativo Mobile</ion-card-title>
+        <ion-card class="progress_card" color="tertriary" *ngFor="let activity of activityManager.listOfActivities">
+            <ion-card-title>{{activity.getName()}}</ion-card-title>
             <ion-card-content>
                 <ion-row>
-                    <ion-text>Deadline: <b>04/28/2021</b></ion-text>
+                    <ion-text>Deadline: <b>{{activity.getDeadline()}}</b></ion-text>
                 </ion-row>
                 <ion-row>
-                    <ion-progress-bar value="0.2"></ion-progress-bar>
+                    <ion-progress-bar [value]=activity.progress></ion-progress-bar>
                 </ion-row>
-                <ion-text>3 of 7 tasks</ion-text>
-                <ion-fab-button slot="fixed" size="small" class="add_button_icon">
+                <ion-text>{{activity.getQuantityOfCompletedTasks()}} of {{activity.getQuantityOfTasks()}} tasks</ion-text>
+                <ion-fab-button slot="fixed" size="small" class="add_button_icon" routerLink="/home/new-activity">
                     <ion-icon name="add"></ion-icon>
-                </ion-fab-button>
-            </ion-card-content>
-        </ion-card>
-
-    </ion-row>
-
-    <ion-row>
-
-        <ion-card class="progress_card" color="tertriary">
-            <ion-card-title>Trabalho de Redes</ion-card-title>
-            <ion-card-content>
-                <ion-row>
-                    <ion-text>Deadline: <b>05/13/2021</b></ion-text>
-                </ion-row>
-                <ion-row>
-                    <ion-progress-bar value="0.6"></ion-progress-bar>
-                </ion-row>
-                <ion-text>6 of 10 tasks</ion-text>
-                <ion-fab-button slot="fixed" size="small" class="add_button_icon">
-                    <ion-icon name="add"></ion-icon>
-                </ion-fab-button>
-            </ion-card-content>
-        </ion-card>
-
-    </ion-row>
-
-    <ion-row>
-
-        <ion-card class="progress_card" color="tertriary">
-            <ion-card-title>APS Automatos</ion-card-title>
-            <ion-card-content>
-                <ion-row>
-                    <ion-text>Deadline: <b>05/18/2021</b></ion-text>
-                </ion-row>
-                <ion-row>
-                    <ion-progress-bar></ion-progress-bar>
-                </ion-row>
-                <ion-text>0 of 9 tasks</ion-text>
-                <ion-fab-button slot="fixed" size="small" class="add_button_icon">
-                    <ion-icon name="add"></ion-icon>
-                </ion-fab-button>
-            </ion-card-content>
-        </ion-card>
-
-    </ion-row>
-
-    <ion-row>
-
-        <ion-card class="progress_card" color="tertriary">
-            <ion-card-title>APS Sistema Distribuidos</ion-card-title>
-            <ion-card-content>
-                <ion-row>
-                    <ion-text>Deadline: <b>05/21/2021</b></ion-text>
-                </ion-row>
-                <ion-row>
-                    <ion-progress-bar value="1"></ion-progress-bar>
-                </ion-row>
-                <ion-text>9 of 9 tasks</ion-text>
-                <ion-fab-button slot="fixed" size="small" class="add_button_icon">
-                    <ion-icon name="add" size="small"></ion-icon>
                 </ion-fab-button>
             </ion-card-content>
         </ion-card>
