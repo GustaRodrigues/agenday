@@ -9,7 +9,8 @@
                     <ion-text>Deadline: <b>{{activity.getDeadline()}}</b></ion-text>
                 </ion-row>
                 <ion-row>
-                    <ion-progress-bar [value]="(activity.getProgress()/100)" [color]="activity.getProgress() <= 35 ? 'danger' : 'secondary'" ></ion-progress-bar>
+                    <ion-progress-bar [value]="(activity.getProgress()/100)"
+                    [color]="activity.getProgress() <= 35 ? 'danger' : activity.getProgress() >= 75 ? 'success' : 'warning'"></ion-progress-bar>
                 </ion-row>
                 <ion-text>{{activity.getQuantityOfCompletedTasks()}} of {{activity.getQuantityOfTasks()}} tasks</ion-text>
                 <ion-fab-button slot="fixed" size="small" class="add_button_icon" routerLink="/home/new-activity">
