@@ -13,32 +13,35 @@
         <ion-title class="title">Activity Name</ion-title>
       </ion-item>
       <ion-item>
-        <ion-input type="text" name="activity-name"></ion-input>
+        <ion-input type="text" name="activity-name" inputmode="text" [(ngModel)]="aName"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-title class="title">Deadline</ion-title>
       </ion-item>
       <ion-item>
-        <ion-input type="text" name="final-date"></ion-input>
+        <ion-input type="text" name="deadline" inputmode="text" [(ngModel)]="aDeadline"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-title class="title">Team</ion-title>
+        <ion-title class="title">Members</ion-title>
       </ion-item>
       <ion-item>
-        <ion-input type="text" name="team"></ion-input>
+        <ion-input type="text" name="members" inputmode="text" [(ngModel)]="aTeam"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-title class="title">Task</ion-title>
+        <ion-title class="title" inputmode="text">Task</ion-title>
       </ion-item>
       <ion-item>
-        <ion-input type="text" name="task"></ion-input>
+        <ion-input type="text" name="task" inputmode="text"[(ngModel)]="aTask"></ion-input>
       </ion-item>
       
-      <ion-button size="large"><ion-icon name="add-circle-outline"></ion-icon>New task</ion-button>
-      <ion-button class="create-button" color="#63EE60" routerLink="/home/add-activities" size="large">Create</ion-button>
+      <!--<ion-button size="large"><ion-icon name="add-circle-outline"></ion-icon>New task</ion-button>-->
+      <ion-button class="create-button" color="#63EE60" routerLink="/home/add-activities" 
+            size="large" (click)="activityManager.createActivity(aName, aTeam, aDeadline, aTask)">
+        Create
+      </ion-button>
 
     </ion-list>
   </div>

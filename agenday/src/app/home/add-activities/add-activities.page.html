@@ -14,11 +14,11 @@
                     <ion-card-subtitle>Deadline: <b>{{activity.getDeadline()}}</b></ion-card-subtitle>
                 </div>
                 <ion-card-content>
-                    <ion-card-subtitle>{{activity.getMembers()}}</ion-card-subtitle>                    
+                    <ion-card-subtitle class="activity-members">{{activity.getMembers()}}</ion-card-subtitle>                    
                 </ion-card-content>
                 <ion-progress-bar [color]="activity.getProgress() <= 35 ? 'danger' : activity.getProgress() >= 75 ? 'success' : 'warning'" 
                     [value]="(activity.getProgress()/100)"></ion-progress-bar>
-                <ion-card-subtitle>Progress: {{activity.getProgress()}}</ion-card-subtitle>
+                <ion-card-subtitle>Progress: <b>{{activity.getProgress()}}%</b></ion-card-subtitle>
             </ion-card-header>
         </div>
         <ion-card-content class="content-tasks">

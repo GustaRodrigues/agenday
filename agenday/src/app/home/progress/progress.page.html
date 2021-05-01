@@ -12,7 +12,7 @@
                     <ion-progress-bar [value]="(activity.getProgress()/100)"
                     [color]="activity.getProgress() <= 35 ? 'danger' : activity.getProgress() >= 75 ? 'success' : 'warning'"></ion-progress-bar>
                 </ion-row>
-                <ion-text>{{activity.getQuantityOfCompletedTasks()}} of {{activity.getQuantityOfTasks()}} tasks</ion-text>
+                <ion-text>{{activity.getQuantityOfCompletedTasks()}} of {{activity.getQuantityOfTasks()}} tasks - <b>{{activity.getProgress()}}%</b></ion-text>
                 <ion-fab-button slot="fixed" size="small" class="add_button_icon" routerLink="/home/new-activity">
                     <ion-icon name="add"></ion-icon>
                 </ion-fab-button>
