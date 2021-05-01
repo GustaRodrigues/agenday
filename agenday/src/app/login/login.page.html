@@ -5,16 +5,16 @@
         <h2>AgenDay</h2>
         <ion-list lines="none">
           <ion-item>
-            <ion-input placeholder="Username" type="text" name="username"></ion-input>
+            <ion-input placeholder="E-mail" type="text" [(ngModel)]="userLogin.email"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input placeholder="Password" type="password" name="password"></ion-input>
+            <ion-input placeholder="Password" type="password" [(ngModel)]="userLogin.password"></ion-input>
           </ion-item>
         </ion-list>
         <ion-button class="forgot" expand="full" fill="clear" (click)="presentModal()">Forgot Password ?</ion-button>
 
         <div class="buttons">
-          <ion-button routerLink="/home/progress" class="sign-in" expand="block">Sign In</ion-button>
+          <ion-button class="sign-in" expand="block" (click)="login()">Sign In</ion-button>
           <ion-button routerLink="/register" class="sign-up" expand="block" fill="clear">Sign Up</ion-button>
         </div>
       </div>
