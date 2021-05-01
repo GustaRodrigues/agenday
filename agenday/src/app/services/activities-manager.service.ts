@@ -7,7 +7,7 @@ import { Task } from './activities.service';
   providedIn: 'root'
 })
 
-export class ActivitiesManagerService {
+export class ActivitiesManagerService { //Esta classe utiliza o padrão de projeto Singleton
 
   private static instance: ActivitiesManagerService;
   public listOfActivities: ActivitiesService[] = [];
@@ -16,7 +16,7 @@ export class ActivitiesManagerService {
     this.insertExample();
   }
 
-  public static getInstance(): ActivitiesManagerService{
+  public static getInstance(): ActivitiesManagerService{ //Implementação do Singleton
     if (!ActivitiesManagerService.instance){
       ActivitiesManagerService.instance = new ActivitiesManagerService();
     }
@@ -28,7 +28,7 @@ export class ActivitiesManagerService {
      this.listOfActivities.push(anActivite);
   }
 
-  public insertExample(){
+  public insertExample(){ //Método utilizado para criar Atividades, para testar-las 
 
     let task1: Task = new Task("Criar Interface");
     let task2: Task = new Task("Melhorar o Backend");

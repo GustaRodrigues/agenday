@@ -44,18 +44,18 @@ export class ActivitiesService {
     return this.quantityOfTasks;
   }
 
-  public getProgress(){
+  public getProgress(){ //Quando este método é chamado, a % do progresso é calculada
     this.getQuantityOfCompletedTasks();
     this.progress = Math.round((this.quantityOfCompletedTasks/this.quantityOfTasks)*100);
     return this.progress;
   }
 
-  public getQuantityOfCompletedTasks(){
+  public getQuantityOfCompletedTasks(){ //Quando este método é chamado, calcula a quantidade de tarfeas concluídas
     this.quantityOfCompletedTasks = 0;
 
     for (let i = 0; i< this.tasks.length; i = i+1){
       let aTask: Task = this.tasks[i];
-      this.quantityOfCompletedTasks += (aTask.getCompleted() === true ? 1 : 0);
+      this.quantityOfCompletedTasks += (aTask.getCompleted() === true ? 1 : 0); //Se a tarefas estiver compelta, ele adicona 1 ao atributo de tarefas completas
     }
     return this.quantityOfCompletedTasks;
   }
