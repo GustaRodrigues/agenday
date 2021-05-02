@@ -15,23 +15,23 @@
 
         <ion-item>
           <ion-label position="floating">Full Name:</ion-label>
-          <ion-input type="text" name="name"></ion-input>
+          <ion-input required="true" type="text" [(ngModel)]="userRegister.name"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Birth Date:</ion-label>
-          <ion-input type="Date" name="birth-date" class="input-date"></ion-input>
+          <ion-input required="true" type="Date" [(ngModel)]="userRegister.birthDate" class="input-date"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">E-mail:</ion-label>
-          <ion-input type="email" [(ngModel)]="userRegister.email"></ion-input>
+          <ion-input required="true" type="email" [(ngModel)]="userRegister.email"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Mobile Number:</ion-label>
-          <ion-input type="tel" name="mobile-number"></ion-input>
+          <ion-input required="true" type="tel" [(ngModel)]="userRegister.mobile"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Password:</ion-label>
-          <ion-input type="password" [(ngModel)]="userRegister.password"></ion-input>
+          <ion-input required="true" type="password" [(ngModel)]="userRegister.password"></ion-input>
         </ion-item>
         <ion-button expand="block" (click)="register()">Register</ion-button>
       </ion-list>

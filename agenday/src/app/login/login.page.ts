@@ -34,8 +34,8 @@ export class LoginPage {
     await this.presentLoading();
 
     try {
-      await this.authService.login(this.userLogin);
-     
+      const user = await this.authService.login(this.userLogin);
+      console.log(user.user.email)
     } catch (error) {
       this.presentToast(error.message);
     } finally {

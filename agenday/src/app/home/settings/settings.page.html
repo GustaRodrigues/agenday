@@ -38,7 +38,7 @@
                 <ion-input type="password" name="confirm-password"></ion-input>
             </ion-item>
             <ion-button expand="block" size="large">Save</ion-button>
-            <ion-button routerLink="/login" expand="block" size="large" color="danger">Logout</ion-button>
+            <ion-button (click)="logout()" expand="block" size="large" color="danger">Logout</ion-button>
         </ion-list>
     </form>
 </ion-content>
