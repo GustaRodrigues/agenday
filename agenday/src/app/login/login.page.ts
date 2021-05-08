@@ -35,7 +35,7 @@ export class LoginPage {
 
     try {
       const user = await this.authService.login(this.userLogin);
-      console.log(user.user.email)
+      location.reload();
     } catch (error) {
       this.presentToast(error.message);
     } finally {

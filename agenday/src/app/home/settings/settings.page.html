@@ -7,7 +7,7 @@
     <form>
         <ion-item> 
             <ion-text class="name">
-                
+                {{userName}}
                 <ion-icon name="pencil-outline"></ion-icon>
             </ion-text>
         </ion-item>
@@ -17,11 +17,15 @@
             </ion-item>
             <ion-item> 
                 <ion-label position="stacked">E-mail</ion-label>
-                <ion-input type="email" name="email"></ion-input>
+                <ion-input type="email" name="email" value={{userEmail}} disabled></ion-input>
             </ion-item>
             <ion-item> 
                 <ion-label position="stacked">Mobile Number</ion-label>
-                <ion-input type="tel" name="mobile-number"></ion-input>
+                <ion-input type="tel" name="mobile-number" value={{userMobile}} disabled></ion-input>
+            </ion-item>
+            <ion-item> 
+                <ion-label position="stacked">Birth Date</ion-label>
+                <ion-input type="date" name="birthDate" value={{userBirthDate}} disabled></ion-input>
             </ion-item>
             <ion-item>
                 <ion-text class="title">Change Password</ion-text>
