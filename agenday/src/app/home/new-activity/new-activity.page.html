@@ -30,25 +30,26 @@
         <ion-input type="text" name="members" inputmode="text" [(ngModel)]="aTeam"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-title class="title" inputmode="text">Task</ion-title>
       </ion-item>
       <ion-item>
         <ion-input type="text" name="task" inputmode="text" [(ngModel)]="aTask"></ion-input>
-      </ion-item>
-
-      <div *ngFor="let att of anArray; let idx = index">
-        <ion-item>
-          <ion-title class="title" color="primary">Task</ion-title>
-        </ion-item>
-        <ion-item>
-          <ion-input type="text" [(ngModel)]="anArray[idx].value"></ion-input>
-        </ion-item>
+      </ion-item> -->
+      <div>
+        <div *ngFor="let att of taskArray; let idx = index" >
+          <ion-item>
+            <ion-title class="title" color="primary">Task</ion-title>
+          </ion-item>
+          <ion-item >
+            <ion-input type="text" [(ngModel)]="taskArray[idx].value"></ion-input>
+          </ion-item>
+        </div>
       </div>
       
       <ion-button size="large" name="new-task" (click)="newTask()"><ion-icon name="add-circle-outline"></ion-icon>New task</ion-button>
       <ion-button class="create-button" color="#63EE60" routerLink="/home/add-activities" 
-            size="large" (click)="activityManager.createActivity(aName, aTeam, aDeadline, anArray[idx].value)">
+            size="large" (click)="activityManager.createActivity(aName, aTeam, aDeadline, taskArray)">
         Create
       </ion-button>
       

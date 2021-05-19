@@ -23,6 +23,10 @@ export class ActivitiesService {
     this.tasks = aListOfTasks;
     this.quantityOfTasks = this.tasks.length;
    }
+
+  public setTasks(umaTask:Task){
+    this.tasks.push(umaTask);
+  }
   
   public getName() {
     return this.name;    
