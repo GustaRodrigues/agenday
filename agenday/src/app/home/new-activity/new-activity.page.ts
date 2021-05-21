@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { AppComponent } from 'src/app/app.component';
+import { AppModule } from 'src/app/app.module';
 import { ActivitiesManagerService } from '../../services/activities-manager.service';
 import { Task } from '../../services/activities.service';
 
@@ -13,7 +15,7 @@ export class NewActivityPage implements OnInit {
   public activityManager = ActivitiesManagerService.getInstance(); 
   public quantityOfMembers: number = 1;
   public taskArray: string[] = [];
-  
+
   constructor(public navCtrl: NavController) { }
 
   ngOnInit() {

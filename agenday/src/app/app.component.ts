@@ -8,6 +8,9 @@ import { ActivitiesManagerService } from './services/activities-manager.service'
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+
+  static teste;
+
   constructor(private storage: Storage,
     private ActivitiesManagerService: ActivitiesManagerService) {}
 
@@ -15,10 +18,11 @@ export class AppComponent {
     // If using a custom driver:
     // await this.storage.defineDriver(MyCustomDriver)
     await this.storage.create();
-     this.ActivitiesManagerService.setValue();
-     
-     this.ActivitiesManagerService.getValue();
+    
+    
+    
   }
+
 
   
 

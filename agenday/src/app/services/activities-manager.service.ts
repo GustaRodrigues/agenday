@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { ElementFinder } from 'protractor';
 import { ActivitiesService } from './activities.service';
 import { Task } from './activities.service';
 
 import { Storage } from'@ionic/storage';
 import { StorageService } from './storage-offline.service';
-import { type } from 'node:os';
-import { Console } from 'node:console';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +16,18 @@ export class ActivitiesManagerService { //Esta classe utiliza o padrão de proje
   private static instance: ActivitiesManagerService;
   public listOfActivities: ActivitiesService[] = [];
   public name: any;
+  public storage: Storage;
+  public storageService: StorageService;
 
-  private constructor(private storage?: Storage,
-    private storageService?: StorageService) { 
-    
-    this.insertExample();
+  private constructor() { 
+    this.storage = new Storage();
+    this.storageService  = new StorageService(this.storage);
+
+    this.getValue();
+    // this.insertExample();
   }
+
+
 
   public static getInstance(): ActivitiesManagerService{ //Implementação do Singleton
     if (!ActivitiesManagerService.instance){
@@ -31,8 +36,9 @@ export class ActivitiesManagerService { //Esta classe utiliza o padrão de proje
     return ActivitiesManagerService.instance;
   }
   
-  public createActivity(aName: string, aListOfMembers: string[], aDeadline: string, aListOfTasks){
+  public createActivity(aName: string, aListOfMembers: string[], aDeadline: string, aListOfTasks, number?: Number){
     let tasks: Task[] = [];
+
     if(Array.isArray(aListOfTasks)){
       for(let i=0; i < aListOfTasks.length; i += 1){
           let aTask: Task = new Task(aListOfTasks[i]);
@@ -47,6 +53,12 @@ export class ActivitiesManagerService { //Esta classe utiliza o padrão de proje
     let anActivite = new ActivitiesService(aName, aListOfMembers, aDeadline, tasks);
     this.listOfActivities.push(anActivite);
    
+    console.log(this.listOfActivities.length)
+    if(number == 1){
+
+    }else {
+      this.setValue();
+    }
     
 
   }
@@ -81,12 +93,25 @@ export class ActivitiesManagerService { //Esta classe utiliza o padrão de proje
   }
 
   async setValue() {
-    await this.storage.set('activates',this.listOfActivities);
+    console.log(this.listOfActivities);
+    await this.storage.set('activates', this.listOfActivities);
   }
 
+
   async getValue() {
-    const name = await this.storage.get('activates');
-    console.log(name[0].members);
+    console.log(this.listOfActivities.length);
+   const name  = await this.storage.get('activates');
+   console.log(`Esse é o tamanho ${name.length} `);
+   let aTasks: String [] = [];
+   for (let value of name) {
+     for(let task of value.tasks){
+       aTasks.push(task.name);
+     }
+
+     this.createActivity(value.name,value.members, value.deadline, aTasks, 1);    
+     
+    }
+   
   }
   
 
